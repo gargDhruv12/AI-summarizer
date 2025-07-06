@@ -1,13 +1,13 @@
 document.getElementById("summarize").addEventListener("click", async () => {
-  const result = document.getElementById("result");
-  result.innerHTML = '<div class="loading"><div class="loader"></div></div>';
+  const resultElement = document.getElementById("result");
+  resultElement.innerHTML = '<div class="loading"><div class="loader"></div></div>';
 
   const summaryType = document.getElementById("summary-type").value;
 
   // Get API key from storage
-  chrome.storage.sync.get(["geminiApiKey"], async (result) => {
-    if (!result.geminiApiKey) {
-      result.innerHTML =
+  chrome.storage.sync.get(["geminiApiKey"], async (storageResult) => {
+    if (!storageResult.geminiApiKey) {
+      resultElement.innerHTML =
         "API key not found. Please set your API key in the extension options.";
       return;
     }
@@ -17,8 +17,14 @@ document.getElementById("summarize").addEventListener("click", async () => {
         tab.id,
         { type: "GET_ARTICLE_TEXT" },
         async (res) => {
+          if (chrome.runtime.lastError) {
+            console.error('Runtime error:', chrome.runtime.lastError);
+            resultElement.innerText = "Error: Could not communicate with the page. Please refresh the page and try again.";
+            return;
+          }
+          
           if (!res || !res.text) {
-            result.innerText =
+            resultElement.innerText =
               "Could not extract article text from this page.";
             return;
           }
@@ -27,11 +33,11 @@ document.getElementById("summarize").addEventListener("click", async () => {
             const summary = await getGeminiSummary(
               res.text,
               summaryType,
-              result.geminiApiKey
+              storageResult.geminiApiKey
             );
-            result.innerText = summary;
+            resultElement.innerText = summary;
           } catch (error) {
-            result.innerText = `Error: ${
+            resultElement.innerText = `Error: ${
               error.message || "Failed to generate summary."
             }`;
           }
