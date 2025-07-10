@@ -4,66 +4,143 @@
     <title>AI Summary Settings</title>
     <style>
       body {
-        font-family: Arial, sans-serif;
-        padding: 20px;
-        max-width: 600px;
-        margin: 0 auto;
+        font-family: 'Inter', 'Segoe UI', 'Roboto', Arial, sans-serif;
+        padding: 0;
+        margin: 0;
+        min-height: 100vh;
+        background: linear-gradient(120deg, #18181b 0%, #232b3b 60%, #2d2250 100%);
+        background-image: url('https://www.transparenttextures.com/patterns/diamond-upholstery.png'), linear-gradient(120deg, #18181b 0%, #232b3b 60%, #2d2250 100%);
+        background-blend-mode: overlay;
+        color: #e4e6eb;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        position: relative;
+        overflow-x: hidden;
+      }
+      .container {
+        background: rgba(35, 35, 43, 0.82);
+        border-radius: 20px;
+        box-shadow: 0 8px 40px 0 rgba(0,0,0,0.65), 0 0 0 2px #3b82f6, 0 0 24px 2px #06b6d4;
+        border: 1.5px solid #232b3b;
+        padding: 32px 24px 24px 24px;
+        max-width: 400px;
+        width: 100%;
+        margin-top: 120px;
+        transition: box-shadow 0.2s, border 0.2s;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        position: relative;
+        z-index: 1;
+      }
+      .container:hover {
+        box-shadow: 0 12px 48px 0 rgba(0,0,0,0.75), 0 0 0 3px #06b6d4, 0 0 32px 6px #3b82f6;
+        border: 1.5px solid #06b6d4;
       }
       h1 {
-        color: #4285f4;
+        color: #3b82f6;
+        font-size: 1.7rem;
+        margin-bottom: 20px;
+        text-align: center;
+        letter-spacing: 1px;
+        font-weight: 700;
+        text-shadow: none;
       }
       .form-group {
         margin-bottom: 20px;
       }
       label {
         display: block;
-        margin-bottom: 5px;
-        font-weight: bold;
+        margin-bottom: 7px;
+        font-weight: 600;
+        color: #b0b8c1;
+        letter-spacing: 0.2px;
       }
       input[type="text"] {
         width: 100%;
-        padding: 8px;
+        padding: 11px 14px;
         box-sizing: border-box;
-        border: 1px solid #ddd;
-        border-radius: 4px;
+        border: 1.5px solid #232b3b;
+        border-radius: 7px;
+        background: #18181b;
+        color: #e4e6eb;
+        font-size: 1rem;
+        font-weight: 500;
+        transition: border 0.2s, box-shadow 0.2s, background 0.2s;
+        outline: none;
+        box-shadow: none;
+      }
+      input[type="text"]:focus {
+        border: 1.5px solid #3b82f6;
+        background: #23232b;
+        box-shadow: 0 0 0 2px #3b82f655;
       }
       button {
-        background-color: #4285f4;
-        color: white;
+        background: linear-gradient(90deg, #2563eb 0%, #06b6d4 100%);
+        color: #fff;
         border: none;
-        padding: 10px 15px;
-        border-radius: 4px;
+        padding: 12px 0;
+        border-radius: 7px;
+        font-size: 1rem;
+        font-weight: 700;
         cursor: pointer;
+        box-shadow: 0 2px 8px #2563eb22;
+        transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+        margin-top: 8px;
+        width: 100%;
+        letter-spacing: 0.3px;
       }
       button:hover {
-        background-color: #3367d6;
+        background: linear-gradient(90deg, #06b6d4 0%, #2563eb 100%);
+        transform: translateY(-2px) scale(1.03);
+        box-shadow: 0 4px 16px #06b6d455;
       }
       .success-message {
-        color: green;
-        margin-top: 10px;
+        color: #06d6a0;
+        margin-top: 14px;
         display: none;
+        text-align: center;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+        text-shadow: none;
+      }
+      a {
+        color: #3b82f6;
+        text-decoration: underline;
+        transition: color 0.2s;
+        font-weight: 500;
+      }
+      a:hover {
+        color: #06b6d4;
+      }
+      @media (max-width: 500px) {
+        .container {
+          padding: 18px 4px 10px 4px;
+          margin-top: 32px;
+        }
+        h1 {
+          font-size: 1.1rem;
+        }
       }
     </style>
   </head>
   <body>
-    <h1>AI Summary Settings</h1>
-
-    <div class="form-group">
-      <label for="api-key">Gemini API Key:</label>
-      <input type="text" id="api-key" placeholder="Enter your Gemini API key" />
-      <p>
-        You can get an API key from
-        <a href="https://makersuite.google.com/app/apikey" target="_blank"
-          >Google AI Studio</a
-        >
+    <div class="container">
+      <h1>AI Summary Settings</h1>
+      <div class="form-group">
+        <label for="api-key">Gemini API Key:</label>
+        <input type="text" id="api-key" placeholder="Enter your Gemini API key" />
+        <p style="font-size: 0.95em; color: #bdbdbd; margin-top: 8px;">
+          You can get an API key from
+          <a href="https://makersuite.google.com/app/apikey" target="_blank">Google AI Studio</a>
+        </p>
+      </div>
+      <button id="save-button">Save Settings</button>
+      <p id="success-message" class="success-message">
+        Settings saved successfully!
       </p>
     </div>
-
-    <button id="save-button">Save Settings</button>
-    <p id="success-message" class="success-message">
-      Settings saved successfully!
-    </p>
-
     <script src="options.js"></script>
   </body>
 </html>
