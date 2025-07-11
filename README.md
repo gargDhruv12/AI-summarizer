@@ -26,24 +26,22 @@ SumItUp is a sleek Chrome Extension that uses the **Gemini API** to condense lon
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: HTML, CSS, JavaScript
-- **Extension Platform**: Manifest V3
-- **AI Integration**: Gemini API
+- **Frontend**: HTML, CSS, JavaScript  
+- **Extension Platform**: Manifest V3  
+- **AI Integration**: Gemini API  
 
 ---
 
 ## ✨ Features
 
-✅ **One-Click Summaries**  
-✅ 3 Modes:  
-&nbsp;&nbsp;&nbsp;&nbsp;📄 Brief  
-&nbsp;&nbsp;&nbsp;&nbsp;📚 Detailed  
-&nbsp;&nbsp;&nbsp;&nbsp;📌 Bullet Points  
-
-✅ **Copy to Clipboard**  
-✅ First-Time API Key Prompt  
-✅ Light, Fast & Responsive
-
+- ✅ **One-Click Summaries**  
+- ✅ 3 Modes:  
+  - 📄 Brief  
+  - 📚 Detailed  
+  - 📌 Bullet Points  
+- ✅ **Copy to Clipboard**  
+- ✅ First-Time API Key Prompt  
+- ✅ Light, Fast & Responsive
 
 ---
 
@@ -51,40 +49,57 @@ SumItUp is a sleek Chrome Extension that uses the **Gemini API** to condense lon
 
 > 🔑 Make sure you have a [Gemini API Key](https://aistudio.google.com/app/apikey)
 
-### Step 1: Download & Load Extension
+### Step 1: Load the Extension
 
-1. Download the ZIP of this repo and **extract** it.
-2. Go to `chrome://extensions/` in your browser.
-3. Turn on **Developer Mode** (top right).
-4. Click **Load Unpacked**.
-5. Select the extracted folder → Done ✅
+1. Download the ZIP of this repo and **extract** it  
+2. Open Chrome and go to: `chrome://extensions/`  
+3. Enable **Developer Mode** (top right)  
+4. Click **Load Unpacked**  
+5. Select the extracted folder → You're done ✅
 
-### Step 2: Enter Your Gemini API Key
+### Step 2: Set Up the API Key
 
-- On first use, you’ll be asked to **enter your API key**
-- Stored securely in local browser storage
-- You can change it anytime
+- On first use, you’ll be prompted to enter your **Gemini API Key**  
+- The key is stored securely in local storage  
+- You can update or reset it anytime
 
 ---
 
 ## 💡 How to Use
 
-> Using SumItUp is easy:
-
-1. Visit any **blog**, **article**, or **documentation**
-2. Click the 🧠 **SumItUp icon** in your Chrome toolbar
-3. Choose your preferred **summary mode**
-4. Get your clean, structured summary in seconds! ⚡
+1. Open any blog, article, or tutorial  
+2. Click the 🧠 **SumItUp icon** in the Chrome toolbar  
+3. Choose one of the three summary modes  
+4. Your summary appears instantly! 🎉  
+5. Click **Copy** to save the result  
 
 ---
 
 ## 📸 Screenshots
 
-| Popup Modes | Summary Output | API Key Prompt |
-|-------------|----------------|----------------|
-| ![](assets/modes.png) | ![](assets/output.png) | ![](assets/setup.png) |
 
-> You can replace these with actual screenshots from your extension.
+<p align="center">
+  <img src="assets/setup.png" alt="API Key Prompt" width="60%" />
+  <br><em>🔐 API Key setup prompt for Gemini</em>
+</p>
+
+<br>
+
+<p align="center">
+  <img src="assets/modes.png" alt="Popup Modes" width="60%" />
+  <br><em>🧠 Select from Brief, Detailed, or Bullet Summary</em>
+</p>
+
+<br>
+
+<p align="center">
+  <img src="assets/output.png" alt="Summary Output" width="60%" />
+  <br><em>📝 AI-generated summary output</em>
+</p>
+
+
+
+
 
 ---
 
