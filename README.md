@@ -1,87 +1,111 @@
-# ⚡ SumItUp – AI-Powered Chrome Extension
+<p align="center">
+  <img src="assets/sumitup-banner.png" alt="SumItUp Banner" width="100%" />
+</p>
 
-![License](https://img.shields.io/badge/license-MIT-green)
-![Built with](https://img.shields.io/badge/Built%20with-Gemini%20API-blue)
-![Status](https://img.shields.io/badge/status-Active-success)
+<h1 align="center">⚡ SumItUp</h1>
 
-> 📚 Instantly summarize articles, blogs, and study material using AI. Simple, powerful, and time-saving.
+<p align="center"><strong>AI-Powered Chrome Extension to Instantly Summarize Articles, Blogs, and Study Material</strong></p>
 
-![Banner](assets/sumitup-banner.png) <!-- Add your custom image in the assets folder -->
+<p align="center">
+  <img src="https://img.shields.io/badge/Gemini%20API-Integrated-blue" />
+  <img src="https://img.shields.io/badge/Manifest-V3-lightgrey" />
+  <img src="https://img.shields.io/badge/License-MIT-green" />
+</p>
+
+---
+
+## 🔥 Why Use SumItUp?
+
+> **Struggling with long tutorials or endless articles?**
+>
+> 🧠 Let **AI summarize** them for you in seconds!
+
+SumItUp is a sleek Chrome Extension that uses the **Gemini API** to condense long-form content into bite-sized summaries—without leaving your browser.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend**: HTML, CSS, JavaScript
+- **Extension Platform**: Manifest V3
+- **AI Integration**: Gemini API
 
 ---
 
 ## ✨ Features
 
-- 🧠 **AI-Powered Summaries** with Gemini API
-- 📝 3 Summary Modes:  
-  - **Brief** – quick glance  
-  - **Detailed** – in-depth summary  
-  - **Bullet Points** – skimmable info
-- 📋 **Copy to Clipboard** support
-- 🔐 First-time setup prompts for **Gemini API Key**
-- ⚡ Fast, lightweight, and intuitive interface
+✅ **One-Click Summaries**  
+✅ 3 Modes:  
+&nbsp;&nbsp;&nbsp;&nbsp;📄 Brief  
+&nbsp;&nbsp;&nbsp;&nbsp;📚 Detailed  
+&nbsp;&nbsp;&nbsp;&nbsp;📌 Bullet Points  
+
+✅ **Copy to Clipboard**  
+✅ First-Time API Key Prompt  
+✅ Light, Fast & Responsive
+
+<p align="center">
+  <img src="assets/summary-example.png" alt="Summary Screenshot" width="80%" />
+</p>
 
 ---
 
-## 📦 Installation & Setup
+## ⚙️ Setup Instructions
 
-> Before you begin, make sure you have your Gemini API key ready. You can generate one from [Google AI Studio](https://aistudio.google.com/app/apikey).
+> 🔑 Make sure you have a [Gemini API Key](https://aistudio.google.com/app/apikey)
 
-### 🧩 Load Extension in Chrome
+### Step 1: Download & Load Extension
 
-1. Download or clone this repository manually.
-2. Open Chrome and go to: `chrome://extensions/`
-3. Enable **Developer Mode** (top right)
-4. Click **Load unpacked** and select the extension folder (`AI-summarizer`)
-5. Done! The SumItUp icon should now appear in your toolbar 🚀
+1. Download the ZIP of this repo and **extract** it.
+2. Go to `chrome://extensions/` in your browser.
+3. Turn on **Developer Mode** (top right).
+4. Click **Load Unpacked**.
+5. Select the extracted folder → Done ✅
+
+### Step 2: Enter Your Gemini API Key
+
+- On first use, you’ll be asked to **enter your API key**
+- Stored securely in local browser storage
+- You can change it anytime
 
 ---
 
-## 🔧 Add Your Gemini API Key
+## 💡 How to Use
 
-When you first use the extension:
+> Using SumItUp is easy:
 
-- A prompt will ask you to enter your API key.
-- The key is stored securely and used to fetch summaries via Gemini API.
-- You can update or reset your key from the settings page anytime.
+1. Visit any **blog**, **article**, or **documentation**
+2. Click the 🧠 **SumItUp icon** in your Chrome toolbar
+3. Choose your preferred **summary mode**
+4. Get your clean, structured summary in seconds! ⚡
 
 ---
 
 ## 📸 Screenshots
 
-| Modes Available        | Summarized Output       | API Key Setup          |
-|------------------------|-------------------------|------------------------|
-| ![](assets/modes.png)  | ![](assets/output.png)  | ![](assets/setup.png)  |
+| Popup Modes | Summary Output | API Key Prompt |
+|-------------|----------------|----------------|
+| ![](assets/modes.png) | ![](assets/output.png) | ![](assets/setup.png) |
 
-> Replace images in `assets/` folder with your own screenshots for best results.
-
----
-
-## 🛠 Built With
-
-- **Manifest V3**
-- **JavaScript**, **HTML**, **CSS**
-- **Gemini API**
+> You can replace these with actual screenshots from your extension.
 
 ---
 
-## 🙋‍♂️ Author
+## 👨‍💻 Author
 
 **Dhruv Garg**  
 📧 dhruvgarg729729@gmail.com  
 🌐 [Portfolio](https://dhruv-one.vercel.app)  
-💼 [LinkedIn](https://linkedin.com/in/dhruv-garg-ab15302b4)  
+🔗 [LinkedIn](https://linkedin.com/in/dhruv-garg-ab15302b4)  
 💻 [GitHub](https://github.com/gargDhruv12)
 
 ---
 
-## 📄 License
+## 📃 License
 
-MIT License – use freely, credit appreciated.
+This project is licensed under the **MIT License**.  
+Feel free to use, modify, and share with proper credit.
 
 ---
 
-## ⭐ Like the Project?
-
-If SumItUp helped you save time, consider giving it a ⭐ on [GitHub](https://github.com/gargDhruv12/AI-summarizer)!
-
+<p align="center"><strong>🚀 Ready to supercharge your reading with AI? Try SumItUp now!</strong></p>
