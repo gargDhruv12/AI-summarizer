@@ -44,9 +44,6 @@ SumItUp is a sleek Chrome Extension that uses the **Gemini API** to condense lon
 ✅ First-Time API Key Prompt  
 ✅ Light, Fast & Responsive
 
-<p align="center">
-  <img src="assets/summary-example.png" alt="Summary Screenshot" width="80%" />
-</p>
 
 ---
 
