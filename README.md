@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/sumitup-banner.png" alt="SumItUp Banner" width="100%" />
+  <img src="assets/sumitup-banner.jpg" alt="SumItUp Banner" width="100%" />
 </p>
 
 <h1 align="center">⚡ SumItUp</h1>
